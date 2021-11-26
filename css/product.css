@@ -45,3 +45,36 @@
     width: 24px;
     height: 24px;
 }
+
+
+@media(max-width:1000px) {
+    .card__img {
+        flex-basis: 210px;
+    }
+    .card__photo-img {
+        height: 180px;
+    }
+}
+@media(max-width:850px) {
+    .product__img {
+        height: 180px;
+    }
+    .product__wrapper-buy {
+        padding-right: 35px;
+    }
+}
+@media(max-width:750px) {
+    .product__img {
+        height: calc((100vw - 78px)/4 *2);
+    }
+    
+}
+@media(max-width:480px) {
+
+    .product__img {
+        height: calc((100vw - 30px)/4 *2);
+    }
+    .product__wrapper-buy {
+        padding-right: 5px;
+    }
+}

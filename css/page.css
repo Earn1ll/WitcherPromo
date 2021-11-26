@@ -51,6 +51,23 @@ iframe {
     margin-right: auto;
     padding: 0 31px;
 }
+.page {
+    position: relative;
+}
+.page:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/WitherBG.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    z-index: -1;
+}
+
 @media(min-height:900px) {
     .page {
         display: flex;
@@ -59,21 +76,35 @@ iframe {
         max-height: 1400px;
     }
 }
-@media(min-height:1000px) {
+@media(max-width:1000px) {
     body {
         font-size: 16px;
     }
+    .page:before {
+        right: 0;
+    }
 }
-@media(min-height:850px) {
+@media(max-width:850px) {
     .container {
         padding: 0 39px;
     }
+    .page:before {
+        right: 0;
+        bottom: auto;
+        top: 50px;
+        background-position: right top;
+        background-size: 448px;
+    }
 }
-@media(min-height:480px) { 
+@media(max-width:480px) { 
     body {
         font-size: 12px;
     }
     .container {
         padding: 0 15px;
+    }
+    .page:before {
+        top: -50px;
+        background-size: 258px;
     }
 }
