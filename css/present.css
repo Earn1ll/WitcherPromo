@@ -25,3 +25,52 @@ background-position: center;
 .present__hero {
     margin-bottom: 30px;
 }
+@media(max-height:900px) {
+    .present {
+        flex-grow: 1;
+        display: flex;
+        flex-direction:column;
+    }
+    .present__container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        width: 100%;    
+    }
+}
+@media(max-width:1000px) {
+    .present__hero {
+        margin-bottom: 10px;
+    }
+    .present__title {
+        font-size: 70px;
+    }
+    .present__tagline {
+        max-width: 290px;
+        margin-bottom: 28px;
+    }
+    .present__btn {
+        width: 246px;
+        height: 59px;
+    }
+}
+@media(max-width:850px) {
+    .present__hero {
+        margin-bottom: 0;
+    }
+    .present__title {
+        font-size: 60px;
+    }
+    .present__tabs {
+        margin-top: -26px;
+    }
+}
+@media(max-width:650px) {
+    .present__hero {
+        margin-bottom: 30px;
+    }
+    .present__title {
+        font-size: 0;
+    }
+}
