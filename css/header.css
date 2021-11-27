@@ -13,6 +13,7 @@
 .header__navigation {
     justify-self: end;
 }
+}
 @media(min-height:480px) {
     .header {
         padding-top: 15px;
