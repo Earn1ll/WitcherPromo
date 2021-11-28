@@ -1,6 +1,6 @@
-import getData from "./getData";
+import getData from "../js/getData.js";
 
-const hetCard = function(dataCard){
+const getCard = function (dataCard) {
     const li = document.createElement('li');
     li.classList.add('card');
 
@@ -15,12 +15,12 @@ const hetCard = function(dataCard){
                 </figure>
              </a>
             `;
-        break;
-            
+            break;
+
         case 'photo':
-            li.classList.add('card__photo');
+            li.classList.add('card__img');
             li.innerHTML = `<img class="card__photo_img" src="${dataCard.link}" alt="${dataCard.description}">`;
-        break;
+            break;
 
         case 'goods':
             li.classList.add('card__product');
@@ -38,21 +38,20 @@ const hetCard = function(dataCard){
                     </div>
                 </article>
             `;
-        break;
+            break;
 
         default:
             li.innerHTML = 'Нет данных';
     }
 
     return li;
-    li.classList.add('card__video');
-}
+};
 
-const renderTabs = async (i=0) => {
+const renderTabs = async (i = 0) => {
     const tabsContent = document.querySelectorAll('.tabs__content');
     const type = tabsContent[i].dataset.base;
     const data = await getData(`db/${type}.json`);
-    const listElem = data.map(getCard,type);
+    const listElem = data.map(getCard, type);
     tabsContent[i].textContent = '';
     tabsContent[i].append(...listElem);
 }

@@ -1,6 +1,6 @@
 import burgerMenu from "./burger.js";
 import tabs from "./tabs.js";
-import renderTabs from "./renderTabs.js"
+import renderTabs from "./renderTabs.js";
 
 burgerMenu(
     '.burger',

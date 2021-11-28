@@ -1,9 +1,9 @@
 const getData = async(url) => {
-    const responce =await fetch(url);
-    if(responce.ok) {
-        return responce.json();
+    const response = await fetch(url);
+    if(response.ok) {
+        return response.json();
     } else {
-        throw `Ошибка,${responce.status}`;
+        throw `Ошибка,${response.status}`;
     }
     
 }
